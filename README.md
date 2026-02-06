@@ -44,3 +44,4 @@ async def broadcast(data: dict):
     msg = data["msg"]
     bot.send_message(chat_id, msg)
     return {"sent": True}
+web: uvicorn main:app --host 0.0.0.0 --port $PORT
